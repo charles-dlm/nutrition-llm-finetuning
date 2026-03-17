@@ -2,8 +2,6 @@
 
 > A domain-specific language model trained on ANSES research publications to provide evidence-based recommendations on food ingredients and dietary practices.
 
----
-
 ## Important Notice
 
 > **This fine-tuning is not yet functional.**
