@@ -10,8 +10,6 @@
 >
 > The model currently suffers from **hallucinations** — it tends to generate plausible-sounding but factually incorrect responses. This is largely due to hardware constraints encountered during training (see [Limitations](#limitations-hardware--training-constraints) below).
 
----
-
 ## Project Overview
 
 This project fine-tunes **TinyLlama-1.1B-Chat** on a curated corpus of 900+ scientific publications sourced from the French food safety agency [ANSES](https://www.anses.fr), with the goal of building a reliable assistant capable of answering questions about human nutrition based on peer-reviewed evidence.
@@ -22,8 +20,6 @@ The full pipeline covers:
 - Intelligent token-aware text chunking that preserves semantic boundaries
 - Synthetic QA dataset construction from document content and metadata
 - Parameter-Efficient Fine-Tuning (PEFT) using LoRA + 4-bit quantization
-
----
 
 ## Pipeline Description
 
@@ -59,8 +55,6 @@ Que dit ce passage ?
 - **Optimizer**: `paged_adamw_8bit`
 - **Epochs**: 4 | **Batch size**: 8 | **Learning rate**: 2e-4
 
----
-
 ## Limitations: Hardware & Training Constraints
 
 This project was developed under **significant hardware constraints**, which directly impacted the training quality and final model performance.
@@ -78,8 +72,6 @@ As a result:
 - Training on 100% of the scraped corpus (~917 documents)
 - Longer training runs with proper convergence monitoring (loss curves, validation perplexity)
 - Possibly a larger base model or a retrieval-augmented generation (RAG) approach as an alternative to pure fine-tuning
-
----
 
 ## Getting Started
 
@@ -113,8 +105,6 @@ response = generate("Quels sont les effets du fenugrec sur la glycémie ?")
 print(response)
 ```
 
----
-
 ## Dependencies
 
 | Library | Role |
@@ -128,8 +118,6 @@ print(response)
 | `tiktoken` | Token counting for chunking |
 | `langchain-text-splitters` | Utility text splitting |
 
----
-
 ## Model Card
 
 | Parameter | Value |
@@ -141,13 +129,9 @@ print(response)
 | Language | French |
 | Status | Experimental — hallucinations present |
 
----
-
 ## Data Source
 
 All training data is sourced from publicly available scientific opinions and reports published by [ANSES](https://www.anses.fr) (Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail), specifically from the **Human Nutrition Expert Committee** section.
-
----
 
 ## License
 
