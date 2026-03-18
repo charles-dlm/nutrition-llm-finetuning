@@ -1,12 +1,12 @@
 # NutriLLM - Fine-tuned LLM for Human Nutrition Guidance
 
-> A domain-specific language model trained on ANSES research publications to provide evidence-based recommendations on food ingredients and dietary practices.
+A domain-specific language model trained on ANSES research publications to provide evidence-based recommendations on food ingredients and dietary practices.
 
 ## Important Notice
 
-> **This fine-tuning is not yet functional.**
->
-> The model currently suffers from **hallucinations** — it tends to generate plausible-sounding but factually incorrect responses. This is largely due to hardware constraints encountered during training (see [Limitations](#limitations-hardware--training-constraints) below).
+**This fine-tuning is not yet functional.**
+
+The model currently suffers from **hallucinations** — it tends to generate plausible-sounding but factually incorrect responses. This is largely due to hardware constraints encountered during training (see [Limitations](#limitations-hardware--training-constraints) below).
 
 ## Project Overview
 
