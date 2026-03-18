@@ -6,7 +6,7 @@ A domain-specific language model trained on ANSES research publications to provi
 
 **This fine-tuning is not yet functional.**
 
-The model currently suffers from **hallucinations** — it tends to generate plausible-sounding but factually incorrect responses. This is largely due to hardware constraints encountered during training (see [Limitations](#limitations-hardware--training-constraints) below).
+The model currently suffers from **hallucinations**; it tends to generate plausible-sounding but factually incorrect responses. This is largely due to hardware constraints encountered during training (see [Limitations](#limitations-hardware--training-constraints) below).
 
 ## Project Overview
 
@@ -62,8 +62,8 @@ Training was performed on a **Tesla T4 GPU** via Google Colab Free tier. This GP
 
 As a result:
 - **Only ~5% of the available data was used for training**, as running the full dataset would have required prohibitively long training sessions on this hardware.
-- **Certain hyperparameter choices may appear unconventional** (e.g., high batch size with gradient accumulation, relatively high learning rate), but these were dictated by the need to keep training sessions within Colab's session time limits — not by theoretical optimality.
-- Due to these constraints, **model convergence cannot be guaranteed**. The model may not have trained long enough or on enough data to reliably produce accurate, grounded answers — which is likely a contributing factor to the hallucinations observed at inference time.
+- **Certain hyperparameter choices may appear unconventional** (e.g., high batch size with gradient accumulation, relatively high learning rate), but these were dictated by the need to keep training sessions within Colab's session time limits, not by theoretical optimality.
+- Due to these constraints, **model convergence cannot be guaranteed**. The model may not have trained long enough or on enough data to reliably produce accurate, grounded answers, which is likely a contributing factor to the hallucinations observed at inference time.
 
 ### What would be needed to fix this
 - Access to a more powerful GPU (e.g., A100 or H100) or a multi-GPU setup
