@@ -1,4 +1,4 @@
-# NutriLLM — Fine-tuned LLM for Human Nutrition Guidance
+# NutriLLM - Fine-tuned LLM for Human Nutrition Guidance
 
 > A domain-specific language model trained on ANSES research publications to provide evidence-based recommendations on food ingredients and dietary practices.
 
