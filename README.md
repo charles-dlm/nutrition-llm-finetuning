@@ -80,27 +80,10 @@ pip install transformers datasets accelerate peft bitsandbytes
 pip install requests beautifulsoup4 PyPDF2 tiktoken langchain-text-splitters
 ```
 
-### Run the scraper
+### Run
 
 ```bash
-python scraper.py
-# Output: articles_anses.json
-```
-
-### Run fine-tuning
-
-```bash
-python train.py
-# Output: ./tinyllama-anses-lora/
-```
-
-### Run inference
-
-```python
-from inference import generate
-
-response = generate("Quels sont les effets du fenugrec sur la glycémie ?")
-print(response)
+python main.py
 ```
 
 ## Dependencies
